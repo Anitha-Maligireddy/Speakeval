@@ -5,7 +5,11 @@ import tailwindcss from "@tailwindcss/vite";
 import tsConfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
-  server: { port: Number(process.env.PORT) || 8080, host: true },
+  server: {
+    port: Number(process.env.PORT) || 8080,
+    host: true,
+    allowedHosts: true,
+  },
   plugins: [
     tsConfigPaths(),
     tailwindcss(),
